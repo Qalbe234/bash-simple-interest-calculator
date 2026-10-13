@@ -13,6 +13,7 @@ Git,
 GitHub
 
 How to Run:
+
 Run the following command in a terminal ->
 bash simple-interest.sh
 
