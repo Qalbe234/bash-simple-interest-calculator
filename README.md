@@ -16,15 +16,12 @@ The Simple Interest Calculator accepts a principal amount, an annual interest ra
 
 ## Formula
 
-\[
-\text{Simple Interest} = \frac{P \times R \times T}{100}
-\]
+**Simple Interest = (Principal × Rate × Time) / 100**
 
 Where:
-
-- **P** — Principal amount
-- **R** — Annual interest rate (percentage)
-- **T** — Time period in years
+- **Principal (P):** Initial amount
+- **Rate (R):** Annual interest rate in percent
+- **Time (T):** Duration in years
 
 ## Technologies Used
 
@@ -43,13 +40,13 @@ A Bash-compatible terminal and `awk` are required. Linux and macOS typically inc
 Clone the repository:
 
 ```bash
-git clone https://github.com/Qalbe234/github-final-project.git
+git clone https://github.com/Qalbe234/bash-simple-interest-calculator.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd github-final-project
+cd bash-simple-interest-calculator
 ```
 
 ### Run the calculator
@@ -78,7 +75,7 @@ Simple Interest: 1000.00
 ## Project Structure
 
 ```text
-github-final-project/
+bash-simple-interest-calculator/
 ├── README.md
 ├── LICENSE
 ├── CODE_OF_CONDUCT
