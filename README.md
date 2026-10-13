@@ -1,6 +1,6 @@
 # Simple Interest Calculator
 
-A lightweight Bash-based calculator that computes simple interest using user-provided financial inputs. This project demonstrates fundamental shell scripting, user input handling, arithmetic calculations, and formatted output.
+A lightweight Bash-based calculator that calculates simple interest using user-provided financial inputs. This project demonstrates fundamental shell scripting, user input handling, arithmetic calculations, and formatted output.
 
 ## Overview
 
@@ -9,19 +9,41 @@ The Simple Interest Calculator accepts a principal amount, an annual interest ra
 ## Features
 
 - Interactive command-line interface
-- User input for principal, interest rate, and time
-- Simple interest calculation
+- User input for principal amount, interest rate, and time period
+- Accurate simple interest calculation
 - Results formatted to two decimal places
 - Lightweight implementation using Bash and `awk`
 
 ## Formula
 
-**Simple Interest = (Principal × Rate × Time) / 100**
+The simple interest is calculated using the following formula:
+
+**Simple Interest (SI) = (P × R × T) / 100**
 
 Where:
-- **Principal (P):** Initial amount
-- **Rate (R):** Annual interest rate in percent
-- **Time (T):** Duration in years
+
+- **SI** = Simple Interest
+- **P** = Principal amount (initial amount invested or borrowed)
+- **R** = Annual interest rate (percentage)
+- **T** = Time period (in years)
+
+### Example Calculation
+
+Given:
+
+- Principal (P) = 10,000
+- Annual Interest Rate (R) = 5%
+- Time (T) = 2 years
+
+Calculation:
+
+**SI = (10,000 × 5 × 2) / 100**
+
+**SI = 100,000 / 100**
+
+**SI = 1,000.00**
+
+Therefore, the simple interest is **1,000.00**.
 
 ## Technologies Used
 
@@ -33,7 +55,10 @@ Where:
 
 ### Prerequisites
 
-A Bash-compatible terminal and `awk` are required. Linux and macOS typically include both. On Windows, use WSL or Git Bash with the necessary utilities available.
+- A Bash-compatible terminal
+- The `awk` utility
+
+Linux and macOS typically include these tools. Windows users can use WSL or Git Bash with the necessary utilities available.
 
 ### Installation
 
@@ -49,20 +74,47 @@ Navigate to the project directory:
 cd bash-simple-interest-calculator
 ```
 
-### Run the calculator
+### Running the Calculator
+
+Make the script executable:
 
 ```bash
 chmod +x simple-interest.sh
+```
+
+Run the calculator:
+
+```bash
 ./simple-interest.sh
 ```
 
-Alternatively, run it directly with Bash:
+Alternatively, run it directly using Bash:
 
 ```bash
 bash simple-interest.sh
 ```
 
-## Example
+## Source Code
+
+The complete contents of `simple-interest.sh` are shown below:
+
+```bash
+#!/bin/bash
+
+# Simple Interest Calculator
+
+echo "Simple Interest Calculator"
+
+read -p "Enter principal amount: " principal
+read -p "Enter rate of interest (%): " rate
+read -p "Enter time period (years): " time
+
+interest=$(awk "BEGIN {printf \"%.2f\", ($principal * $rate * $time) / 100}")
+
+echo "Simple Interest: $interest"
+```
+
+## Example Output
 
 ```text
 Simple Interest Calculator
@@ -85,13 +137,22 @@ bash-simple-interest-calculator/
 
 ## Learning Outcomes
 
-This project demonstrates basic shell scripting, interactive input collection, arithmetic operations, numeric formatting, and the use of GitHub to document and share code.
+This project demonstrates:
+
+- Basic Bash scripting and command-line interaction
+- Collecting and processing user input
+- Performing arithmetic calculations with `awk`
+- Formatting numerical output to two decimal places
+- Documenting and maintaining a project using GitHub
 
 ## License
 
 This project is licensed under the Apache License 2.0. See the `LICENSE` file for details.
 
 ## Author
+
+Qalbe234
+GitHub: @Qalbe234
 
 **Qalbe234**
 
